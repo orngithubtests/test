@@ -35,6 +35,7 @@ jobs:
           # [Mandatory]
           # The name of the branch on which Frogbot will perform the scan
           JF_GIT_BASE_BRANCH: "main"
+          JF_FAIL: "FALSE"
 
           # [Optional, default: https://api.github.com]
           # API endpoint to GitHub
@@ -75,7 +76,7 @@ jobs:
 
           # [Optional, default: "TRUE"]
           # Fails the Frogbot task if any security issue is found.
-           JF_FAIL: "FALSE"
+           #JF_FAIL: "FALSE"
 
           # [Optional]
           # Frogbot will download the project dependencies, if they're not cached locally. To download the
