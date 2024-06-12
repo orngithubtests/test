@@ -11,11 +11,11 @@ permissions:
 jobs:
   scan-repository:
     runs-on: ubuntu-latest
-    name: Scan Repository (${{ matrix.branch }} branch)
+    name: "Scan Repository main"
     strategy:
       matrix:
         # The repository scanning will be triggered periodically on the following branches.
-        branch: [ "dev" ]
+        branch: [ "main" ]
     steps:
       - uses: jfrog/frogbot@v2
         env:
@@ -75,7 +75,7 @@ jobs:
 
           # [Optional, default: "TRUE"]
           # Fails the Frogbot task if any security issue is found.
-          # JF_FAIL: "FALSE"
+           JF_FAIL: "FALSE"
 
           # [Optional]
           # Frogbot will download the project dependencies, if they're not cached locally. To download the
